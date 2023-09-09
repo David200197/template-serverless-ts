@@ -1,0 +1,5 @@
+export const USER_TOKENS = {
+  SERVICE: Symbol("USER_TOKEN_SERVICE"),
+  REPOSITORY: Symbol("USER_TOKEN_REPOSITORY"),
+  ENTITY: Symbol("USER_TOKEN_ENTITY"),
+};
