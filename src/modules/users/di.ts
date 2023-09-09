@@ -6,8 +6,9 @@ import { UserRepository } from "./models/users.repository";
 import { UserMockRepository } from "./repositories/user-mock-repository";
 import { USER_TOKENS } from "./tokens";
 
-const container = new Container();
-container.bind<UserService>(USER_TOKENS.SERVICE).to(UserBaseService);
-container.bind<UserRepository>(USER_TOKENS.REPOSITORY).to(UserMockRepository);
-
-export { container };
+const usersContainer = new Container();
+usersContainer.bind<UserService>(USER_TOKENS.SERVICE).to(UserBaseService);
+usersContainer
+  .bind<UserRepository>(USER_TOKENS.REPOSITORY)
+  .to(UserMockRepository);
+export { usersContainer };
