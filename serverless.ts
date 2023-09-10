@@ -22,7 +22,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: functions,
+  functions,
   package: { individually: true },
   custom: {
     "serverless-offline-watcher": [
